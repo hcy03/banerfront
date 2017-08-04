@@ -1,0 +1,8 @@
+com/boot/friend/untils/HongBaoAlgorithm.class
+com/boot/friend/controller/AppErrorController.class
+com/boot/friend/controller/TestController.class
+com/boot/friend/controller/TranServiceController.class
+com/boot/friend/domain/TestDomain.class
+com/boot/friend/untils/MyWebAppConfigurer.class
+com/boot/friend/FriendApplication.class
+com/boot/friend/service/TestService.class
