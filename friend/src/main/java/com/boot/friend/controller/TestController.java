@@ -6,10 +6,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.friend.domain.TestDataConfig;
 
 @RestController
 public class TestController {
@@ -18,22 +20,26 @@ public class TestController {
 	@Value(value = "${customs.static-locations}")
 	private String locations;
 
+	@Autowired
+	private TestDataConfig data;
+
 	@RequestMapping("/test")
-	public String service(HttpServletRequest request, @RequestParam("abc") String abc) {
-		log.info("abc:" + abc);
+	public String service(HttpServletRequest request) {
 
 		String bcd = request.getParameter("bcd");
 		log.info("bcd:" + bcd);
 
 		JSONObject obj = new JSONObject();
 		try {
-			obj.put("code", -1002);
 			obj.put("message", "msg");
-			obj.put("customs.static-locations", locations);
+			if (null != this.data)
+				obj.put("testdata", data.getInitdata());
+			else
+				log.info(" TestDataConfig is NULL");
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error("JSONException", e);
 		}
 		return obj.toString();
 	}
+	
 }
