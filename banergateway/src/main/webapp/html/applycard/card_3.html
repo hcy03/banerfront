@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">民生银行IN卡申请</h1>
+	</header>
+	<div class="mui-content ">
+		<div class="mui-slider pt10">
+		  <div class="mui-slider-group">
+			<!--第一个内容区容器-->
+			<div class="mui-slider-item">
+			  <img src="../../image/ms_1.png" alt="" width="100%">
+			</div>
+			<!--第二个内容区-->
+			<div class="mui-slider-item">
+			  <img src="../../image/ms_2.png" alt="" width="100%">
+			</div>
+			<div class="mui-slider-indicator mui-text-right">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		</div>
+		<div class=" body-content" >
+			<div>
+				<p>in实惠：取现免手续费，我的实惠我做主</p>
+				<p>in轻松：对年费说bye-bye，从此省心又省力</p>
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_apply.png" >
+						<div ><font color="#38BA72">准备申卡资料</font></div>
+						<img style="padding-left:30px;padding-top:10px"src="../../image/correct.png" >
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_submit.png" >
+						<div ><font color="#D4237A">提交申卡信息</font></div>
+						<img style="padding-left:30px;padding-top:10px"src="../../image/progressing.png" >
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_result.png" >
+						<div ><font color="#EDBF76">等待申卡结果</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="pt20">
+				<button type="button" class="mui-btn mui-btn-success mui-btn-block ">点击提交申卡信息</button>
+				<button type="button" class="mui-action-back mui-btn mui-btn-warning mui-btn-block ">返回</button>
+			</div>
+			
+		</div>
+		
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+		$(".mui-btn-success").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_result_success.html', 
+			  });
+		});
+			
+	});
+  </script>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">申卡结果</h1>
+	</header>
+	<div class="mui-content ">
+		<div class="mui-slider pt10">
+		   <div class="mui-row">  
+			<div class="mui-col-xs-12 apply-action-success"  >
+				<div class="center"></a></div>
+			</div> 			
+	</div>
+		</div>
+		</div>
+		<div class=" body-content" >
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_apply.png" >
+						<div ><font color="#38BA72">准备申卡资料</font></div>
+						<img style="padding-left:30px;padding-top:10px"src="../../image/correct.png" >
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_submit.png" >
+						<div ><font color="#D4237A">提交申卡信息</font></div>
+						<img style="padding-left:30px;padding-top:10px"src="../../image/correct.png" >
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li id="card_li_1" class="apply-action">
+						<img src="../../image/action_result.png" >
+						<div ><font color="#EDBF76">等待申卡结果</font></div>
+						<img style="padding-left:30px;padding-top:10px"src="../../image/progressing.png" >
+					</li>
+				</ul> 	
+			</div>
+			<div class="pt40">
+				<button type="button" class="mui-btn mui-btn-success mui-btn-block ">确定</button>
+			</div>
+			
+		</div>
+		
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+		$(".mui-btn-success").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/userinfo_success.html', 
+			  });
+		});
+			
+	});
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>摇红包</title>
+<script type="text/javascript" src="../../../js/base.js"></script>
+<link rel="stylesheet" href="css/csshake.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/zepto.min.js"></script>
+<script src="js/red.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+  <a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">红包页</h1>
+</header>
+<!-- 红包 -->
+<div class="red" style="margin-top:64px;"><!-- shake-chunk -->
+    <span style="background-image: url(img/red-w.png);"></span>
+    <button class="redbutton" type="领取红包">拆红包</button>
+    <div class="red-jg">
+    	<h1>太幸运了！</h1>
+        <h1>恭喜您！</h1>
+        <h5 style="line-height:2">获得10元现金，请到我的钱包中查看</h5>
+        <a href="../my_wallet.html"><h5>请到我的钱包中查看</h5></a>
+    </div>
+</div>
+<script type="text/javascript" >  
+$(document).ready(function(){
+    //返回按钮
+    $("#back_a").bind("click", function(){
+       history.go(-1);
+    });
+});
+</script>
+</body>
+</html>

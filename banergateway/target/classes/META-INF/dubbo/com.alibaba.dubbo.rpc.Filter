@@ -1,0 +1,2 @@
+NDCConsumerFilter=com.msds.baseUtil.dubbo.filter.NDCConsumerFilter
+NDCProviderFilter=com.msds.baseUtil.dubbo.filter.NDCProviderFilter

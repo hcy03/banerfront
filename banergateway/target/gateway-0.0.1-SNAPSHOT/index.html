@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/base.js"></script>
+  </head>
+  <body>
+    <div class="mui-content">
+      <div class="mui-panel">
+		<div class="mui-card">
+			<div class="mui-card-content">
+				<img src="image/haoyangmao.png" alt="" width="100%">
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link"></a>
+				<a id="" class="mui-card-link">薅就薅你的羊毛</a>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-content">
+				<img src="image/apply.png" alt="" width="100%">
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link"></a>
+				<a id="applycard" class="mui-card-link">伴儿备好的卡</a>
+			</div>
+		</div>
+		<!-- <div class="mui-card">
+			<div class="mui-card-content">
+				<img src="image/improve.jpg" alt="" width="100%">
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link"></a>
+				<a class="mui-card-link">伴儿给你提额</a>
+			</div>
+		</div> -->
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" >
+		
+		$(document).ready(function(){
+
+			$("#applycard").bind("click", function(){
+				mui.openWindow({
+					url: 'html/applycard/navigation.html'
+			  });
+			});
+		});
+  
+		
+  
+  </script>
+</html>

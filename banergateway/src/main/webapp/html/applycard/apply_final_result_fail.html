@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">申卡结果</h1>
+	</header>
+	<div class="mui-content ">
+		<div class="mui-slider pt10">
+		   <div class="mui-row">  
+			<div class="mui-col-xs-12 final-apply-fail"  >
+				<div class="center"></a></div>
+			</div> 			
+	</div>
+		</div>
+		</div>
+		<div class=" body-content" >
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li  class="apply-action">
+						<img src="../../image/result_fail.png" >
+						<div ><font color="#333333">未通过</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li  class="apply-action">
+						<img src="../../image/time.png" >
+						<div ><font color="#3FAAE2">申请时间：2017-08-06 22:43:00</font></div>
+						<div ><font color="#3FAAE2">处理时间：2017-08-06 22:44:00</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li class="apply-action">
+						<img src="../../image/action_result.png" >
+						<div style="float:none;margin-left:60px"><font color="#EDBF76">因综合评分不 足，您的申请已拒绝！</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="pt40">
+				<button type="button" class="mui-btn mui-btn-warning mui-btn-block ">确定</button>
+			</div>
+			
+		</div>
+		
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+		$(".mui-btn-warning").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_progress_query.html', 
+			  });
+		});
+			
+	});
+  </script>
+</html>

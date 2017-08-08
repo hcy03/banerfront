@@ -1,0 +1,62 @@
+/* 
+* @Author: hcy
+* @Date:   2017-08-07 13:29:06
+*/
+p{ margin:0; padding:0; color:#000;}
+.bg-fff{background-color: #fff !important;}
+#advertisementList ,#advertisementCon1 ,#myWallet{ margin-top: 44px;}
+/* 广告主列表页 */
+#advertisementList ul li{padding: 10px; border-bottom: 1px solid #ccc;}
+#advertisementList .list-r{ margin-left: 20px;}
+#advertisementList ul li h4{color: #616D8F; margin-bottom: 10px !important;}
+#advertisementList ul li p{ font-size: 16px;}
+#advertisementList .list-bg{ width:200px; height:200px; background:url('../image/ad_bg.jpg') no-repeat center; background-size: 100% auto; margin-top:20px;}
+#advertisementList ul li a{ margin-top:20px; color:#616D8F; display:block; font-size: 15px;}
+#advertisementList ul li span{ width:15px; height:15px; background:url('../image/link_icon.png') no-repeat center; background-size: 100% auto; display:inline-block; margin-left:8px;}
+
+/* 广告主内容1，能领取红包 */
+#advertisementCon1 .con-bg{width:100%; height:100%; background:url('../image/ad_bg.jpg') no-repeat center; background-size: 100% auto; margin-top:20px;}
+#advertisementCon1 .content{margin:25px;}
+#advertisementCon1 h4{ font-weight:normal; font-size: 20px; margin-bottom: 20px;}
+#advertisementCon1 p{ line-height: 22px;}
+#advertisementCon1 .red-receive{width:50px; height:50px; background:url('../image/red.png') no-repeat center; background-size: 100% auto; position:fixed; right:20px; bottom:20px;}
+
+/* 广告主内容2，不能领取红包弹出框 */
+.toast-container {position: fixed;top: 50%;left: 50%;z-index: 9999;line-height: 17px;opacity: 0;-webkit-transition: opacity .3s;transition: opacity .3s;-webkit-transform: translate(-50%,0);transform: translate(-50%,0);}
+.toast-container.mui-active {opacity: .9;}
+
+/* 我的钱包 */
+#myWallet .top-bg{ width:100%; height:120px; background-color: #1FBEB9; color:#fff; padding:20px;}
+#myWallet .top-bg h2{ margin-top:15px; font-size: 38px; font-weight: normal;}
+#myWallet .top-bg .money{ font-size: 22px; display:block; margin-top: 30px;}
+#myWallet .top-list span{ display:block;}
+#myWallet .top-list ul{padding:5% 0;}
+#myWallet .top-list li{ width:28.333%; margin-left:5%;}
+#myWallet .top-list li span:nth-child(1){ color:#999; margin-bottom: 5px;}
+#myWallet .top-list li span:nth-child(2){ color:#707070;}
+#myWallet .bor{ border-right:1px solid #ccc;}
+#myWallet .service{height:45px; line-height: 45px;}
+#myWallet p{ color:#888888; font-size: 18px; padding-left: 5%;}
+#myWallet .service-list li{ float:left; background-color: #fff;}
+#myWallet .service-list img{ display:block; margin:auto;}
+#myWallet .service-list span{display:block; text-align: center; margin-top:8px;}
+#myWallet .bor-b{ border-bottom:1px solid #ccc;}
+
+
+.ub
+{
+    display:-webkit-box !important;/* android 2.1-3.0， ios 3.2-4.3 */
+    display:-webkit-flex;/* Chrome 21+ */
+    display:-ms-flexbox !important;/* WP IE 10 */
+    display:flex ;/* android 4.4 */
+    display:box !important;/* android 2.1-3.0， ios 3.2-4.3 */   
+    position:relative;   
+}
+.ub-f1
+{
+    position:relative;
+    -webkit-box-flex:1;/* android 2.1-3.0， ios 3.2-4.3 */
+    -webkit-flex:1;/* Chrome 21+ */
+    -ms-flex:1;/* WP IE 10 */
+    flex:1;/* android 4.4 */    
+}

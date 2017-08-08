@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">伴儿备好的卡</h1>
+	</header>
+	<div class="mui-content body-content">
+		 <div class="mui-row">  
+			<div class="mui-col-xs-12" style="background-image: url(../../image/improveinfo.png); background-size: 100%;">
+				<div class="center "><a id="advisecard">完善信息，伴儿立刻给你荐卡</a></div>
+			</div>  
+		</div>
+		<div class="mui-row" style="padding-top:20px">  
+			<ul class="mui-col-xs-6 ">
+				<li id="apply_progress_li" class="apply-funcion">
+					<img src="../../image/applyprgress.png" >
+					<div >戳我看申卡进度</div>
+				</li>
+			</ul> 
+			<ul class="mui-col-xs-6 ">
+				<li id="apply_cheats_li" class="apply-funcion">
+					<img src="../../image/plan.png" >
+					<div >伴儿的申卡秘籍</div>
+				</li>
+			</ul> 		
+		</div>
+		<div class="title">达人荐卡</div>
+		<ul class="mui-table-view mui-grid-view">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png"/></ul>
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+
+			$("#back_a").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/index.html', 
+			  });
+			});
+	
+			$("#advisecard").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/userinfo.html', 
+			  });
+			});
+			
+			$("#apply_progress_li").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_confirm.html', 
+			  });
+			});
+			
+			$("#apply_cheats_li").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_cheats_list.html', 
+			  });
+			});
+		});
+  </script>
+</html>

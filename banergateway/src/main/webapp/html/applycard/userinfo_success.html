@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">伴儿的荐卡</h1>
+	</header>
+    <div class="mui-content body-content">
+      <div class="mui-row">  
+		<div class="mui-col-xs-12" style="background-image: url(../../image/savesuccess.png); background-size: 100%;">
+			<div class="center ">保存成功，来看伴儿给你的推荐吧</a></div>
+		</div> 			
+	</div>
+
+	<div class="mui-row pt10">  
+		<ul class="mui-col-xs-4 ">
+			<li id="card_li_1" class="bank-card">
+				<img src="../../image/card_1.png" >
+				<div >招行YOUNG卡</div>
+			</li>
+		</ul> 
+		<ul class="mui-col-xs-4 ">
+			<li id="card_li_2" class="bank-card">
+				<img src="../../image/card_2.png" >
+				<div >平安淘宝联名卡</div>
+			</li>
+		</ul> 
+		<ul id="card_li_3" class="mui-col-xs-4 ">
+			<li class="bank-card">
+				<img src="../../image/card_3.png" >
+				<div >民生年轻卡IN卡</div>
+			</li>
+		</ul> 	
+	</div>
+	<div class="title">伴儿猜你还喜欢</div>
+	<ul class="mui-table-view mui-grid-view">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+				<img class="mui-media-object" src="../../image/apply.png">
+		</ul>
+		
+    </div>
+  </body>
+  <script type="text/javascript" >
+		
+		$(document).ready(function(){
+		
+			$("#back_a").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/navigation.html', 
+			  });
+			});
+		
+			$("#card_li_1").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/card_1.html', 
+			  });
+			});
+			$("#card_li_2").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/card_2.html', 
+			  });
+			});
+			$("#card_li_3").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/card_3.html', 
+			  });
+			});
+			
+		});
+  </script>
+</html>

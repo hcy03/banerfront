@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script type="text/javascript" src="../../js/base.js"></script>
+    <title>我的钱包</title>
+    <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="mui-bar mui-bar-nav">
+      <a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+      <h1 class="mui-title">我的钱包</h1>
+    </header>
+    <div id="myWallet">
+        <div class="top-bg">
+            <span>钱包余额(元)</span>
+            <div class="ub">
+            <h2>￥88.</h2><span class="money">00</span>
+            </div>
+        </div>
+        <div class="top-list bg-fff">
+            <ul class="ub">
+                <li class="bor">
+                    <span>币：</span>
+                    <span>23</span>
+                </li>
+                <li class="bor">
+                    <span>直播收入：</span>
+                    <span>56.00</span>
+                </li>
+                <li>
+                    <span>礼物收益：</span>
+                    <span>78.00</span>
+                </li>
+            </ul>
+        </div>
+        <div class="service">
+            <p>服务</p>
+        </div>
+        <div class="service-list">
+            <ul>
+                <li class="bor bor-b">
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                         <span>发红包</span>
+                    </div>
+                </li>
+                <li class="bor bor-b">
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                         <span>发红包</span>
+                    </div>
+                </li>
+                <li class="bor-b">
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                         <span>发红包</span>
+                    </div>
+                </li>
+                <li class="bor">
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                         <span>发红包</span>
+                    </div>
+                </li>
+                <li class="bor">
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                         <span>发红包</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-con">
+                        <img src="../../image/plan.png" height="30" width="30" alt=""> 
+                        <span>发红包</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </body>
+  <script type="text/javascript" >  
+    $(document).ready(function(){
+        $('.service-list li').width(($(window).outerWidth()/3)-2);
+        $('.service-list li').height($('.service-list li').width()-30);
+        var h=($('.service-list li').height()-59)/2;
+        $('.list-con').css('margin-top',h);
+        //返回按钮
+        $("#back_a").bind("click", function(){
+           history.go(-1);
+        });
+    });
+  </script>
+</html>

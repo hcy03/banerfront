@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">申卡结果</h1>
+	</header>
+	<div class="mui-content ">
+		<div class="mui-slider pt10">
+		   <div class="mui-row">  
+			<div class="mui-col-xs-12 apply-action-success"  >
+				<div class="center"></a></div>
+			</div> 			
+	</div>
+		</div>
+		</div>
+		<div class=" body-content" >
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li  class="apply-action">
+						<img src="../../image/result_sucess.png" >
+						<div ><font color="#333333">通过</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li  class="apply-action">
+						<img src="../../image/time.png" >
+						<div style="float:none;margin-left:60px" ><font color="#3FAAE2">申请时间：2017-08-06 00:00:00</font></div>
+						<div style="float:none;margin-left:60px"><font color="#3FAAE2">初审时间：2017-08-07 00:00:00</font></div>
+						<div style="float:none;margin-left:60px"><font color="#3FAAE2">复审时间：2017-08-10 00:00:00</font></div>
+						<div style="float:none;margin-left:60px"><font color="#3FAAE2">制卡时间：2017-08-14 00:00:00</font></div>
+						<div style="float:none;margin-left:60px"><font color="#3FAAE2">邮寄时间：2017-08-15 00:00:00</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="mui-row pt10">  
+				<ul class="mui-col-xs-12 ">
+					<li  class="apply-action">
+						<img src="../../image/action_result.png" >
+						<div style="float:none;margin-left:60px"><font color="#EDBF76">恭喜您，您的申请记录已通过审核，请耐心等待。</font></div>
+					</li>
+				</ul> 	
+			</div>
+			<div class="pt40">
+				<button type="button" class="mui-btn mui-btn-success  mui-btn-block ">确定</button>
+			</div>
+			
+		</div>
+		
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+		$(".mui-btn-success").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_progress_query.html', 
+			  });
+		});
+			
+	});
+  </script>
+</html>

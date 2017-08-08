@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/main/webapp/js/mui/mui.picker-t.min.js,src/main/webapp/js/mui/lrz.mobile.min.js,src/main/webapp/pay/js/respond.min.js,src/main/webapp/js/mui/mui.locker.js,src/main/webapp/manifest.json,src/main/webapp/js/mui/mui.picker.min.js,src/main/webapp/pay/js/echarts.common.min.js,src/main/webapp/js/mui/mui.min.js,src/main/webapp/pay/js/mui.locker.js,src/main/webapp/pay/js/mui.min.js
+validator.Unchecked=

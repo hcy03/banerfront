@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">申卡进度查询</h1>
+		<a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+	</header>
+	<div class="mui-content ">
+		<div class="mui-slider pt10">
+		   <div class="mui-row">  
+			<div class="mui-col-xs-12 apply-process"  >
+				<div class="center"></a></div>
+			</div> 			
+		  </div>
+		</div>
+		</div>
+		<div class=" body-content" >
+			<ul class="mui-table-view">
+				<li id="querylist_li_1" class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../image/card_1.png">
+						<div class="mui-media-body">
+							招商银行YOUNG卡
+							<p class="mui-ellipsis">因综合评分不足，您的招商银行YOUNG卡申请已拒绝！</p>
+						</div>
+					</a>
+				</li>
+				<li id="querylist_li_2" class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../image/card_2.png">
+						<div class="mui-media-body">
+							平安银行淘宝联名卡
+							<p class="mui-ellipsis">申请已受理，请等待审核！</p>
+						</div>
+					</a>
+				</li>
+				<li id="querylist_li_3"  class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../image/card_3.png">
+						<div class="mui-media-body">
+							民生银行年轻卡IN卡
+							<p class="mui-ellipsis">恭喜您，您的申请记录已通过审核，请耐心等待。</p>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+			
+		</div>
+		
+	</div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+	
+		
+		$(".mui-btn-success").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/userinfo_success.html', 
+			  });
+		});
+		$("#back_a").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/navigation.html', 
+			  });
+		});
+		$("#querylist_li_1").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_final_result_fail.html', 
+			  });
+		});
+		$("#querylist_li_2").bind("click", function(){
+			 mui.toast('申请处理中，请耐心等待',{ duration:'long', type:'div' }) 
+		});
+		$("#querylist_li_3").bind("click", function(){
+			mui.openWindow({
+					url: _commonContextPath+'/html/applycard/apply_final_result_success.html', 
+			  });
+		});
+		
+		
+			
+	});
+  </script>
+</html>

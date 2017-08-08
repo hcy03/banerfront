@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+	<script type="text/javascript" src="../../js/base.js"></script>
+	<title>广告主列表页</title>
+    <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body class="bg-fff">
+    <header class="mui-bar mui-bar-nav">
+        <a id="back_a" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">广告主列表页</h1>
+    </header>
+    <div id="advertisementList">
+        <ul>
+            <li>
+                <div class="ub">
+                    <img src="../../image/card.png" height="50" width="50">
+                    <div class="ub-f1 list-r">
+                        <h4>借款官微</h4>
+                        <p>用手机借钱，</p>
+                        <p>用手机借钱，用手机借钱，</p>
+                        <div class="list-bg"></div>
+                        <a href="ad_content1.html">查看详情<span></span></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ub">
+                    <img src="../../image/apply.png" height="50" width="50">
+                    <div class="ub-f1 list-r">
+                        <h4>借款官微</h4>
+                        <p>用手机借钱，</p>
+                        <p>用手机借钱，用手机借钱，</p>
+                        <div class="list-bg"></div>
+                        <a href="ad_content2.html">查看详情<span></span></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </body>
+  <script type="text/javascript" >	
+	$(document).ready(function(){
+      //返回按钮
+      $("#back_a").bind("click", function(){
+          history.go(-1);
+      });			
+	});
+  </script>
+</html>

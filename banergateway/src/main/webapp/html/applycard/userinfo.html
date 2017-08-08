@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../../js/base.js"></script>
+  </head>
+  <body>
+	<header class="mui-bar mui-bar-nav">
+		<a id="back_a" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">完善申卡信息</h1>
+		<a id="save" class="mui-pull-right pt10">完成</a>
+	</header>
+    <div class="mui-content body-content">
+      <form class="mui-input-group">
+		<div class="mui-input-row">
+			<label>姓名拼音</label>
+			<input class="mui-input-clear" placeholder="例如：WANDOU" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>教育程度</label>
+			<input id="showEduPicker" placeholder="教育程度必输"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>婚姻状况</label>
+			<input id="showMarriagePicker" placeholder="婚姻状况必输"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>常驻城市</label>
+			<input id="showCityPicker" placeholder="常驻城市必输"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>住宅性质</label>
+			<input id="showHouseTypePicker" placeholder="请求选择住宅类型"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>住宅(省市区)</label>
+			<input id="showAddressLeve1Picker" placeholder="选择住宅省市地址"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>住宅(街道)</label>
+			<input class="mui-input-clear" placeholder="输入住宅街道地址" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>邮箱</label>
+			<input class="mui-input-clear" placeholder="常用电子邮箱" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>手机号</label>
+			<input class="mui-input-clear" placeholder="常用手机号码" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>单位名称</label>
+			<input class="mui-input-clear" placeholder="现工作单位名称" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>单位(省市区)</label>
+			<input id="showWorkAddressLeve1Picker" placeholder="选择单位省市地址"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>单位(街道)</label>
+			<input class="mui-input-clear" placeholder="输入单位街道地址" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>单位电话</label>
+			<input class="mui-input-clear" placeholder="输入单位电话" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>现单位工作年限</label>
+			<input class="mui-input-clear" placeholder="输入本单位工作年限" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>邮寄地址</label>
+			<input id="showPostAddressPicker" placeholder="选择邮寄地址"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>直亲关系</label>
+			<input id="showRelationshipPicker" placeholder="选择直亲关系"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>直亲姓名</label>
+			<input class="mui-input-clear" placeholder="输入直亲姓名" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>直亲手机号</label>
+			<input class="mui-input-clear" placeholder="输入直亲手机号" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>联系人关系</label>
+			<input id="showFriedshipPicker" placeholder="选择联系人关系"  class="mui-input-clear" readonly type="text"></input>
+		</div>
+		<div class="mui-input-row">
+			<label>联系人姓名</label>
+			<input class="mui-input-clear" placeholder="输入联系人姓名" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+		<div class="mui-input-row">
+			<label>联系人手机号</label>
+			<input class="mui-input-clear" placeholder="输入联系人手机号" data-input-clear="3" type="text">
+			<span class="mui-icon mui-icon-clear mui-hidden"></span>
+		</div>
+	</form>
+    </div>
+  </body>
+  <script type="text/javascript" >
+		
+		$(document).ready(function(){
+		
+			$("#save").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/userinfo_success.html', 
+			  });
+			});
+			
+			$("#back_a").bind("click", function(){
+				mui.openWindow({
+					url: _commonContextPath+'/html/applycard/navigation.html', 
+			  });
+			});
+			
+		
+			$("#showEduPicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'高中及以下'},
+								{value:'01',text:'中专'},
+								{value:'02',text:'大专'},
+								{value:'03',text:'本科'},
+								{value:'04',text:'硕士'},
+								{value:'05',text:'博士及以上'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showEduPicker").val(selectItems[0].text);
+				});
+			
+			});
+			
+			$("#showMarriagePicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'未婚'},
+								{value:'01',text:'已婚'},
+								{value:'02',text:'其他'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showMarriagePicker").val(selectItems[0].text);
+				});
+			
+			});
+			
+			$("#showCityPicker").bind("click", function(){
+				var picker = new mui.PopPicker({
+					layer: 2
+				});
+				picker.setData([{
+					value: '110000',
+					text: '北京',
+					children: [{
+							value: "110101",
+							text: "北京"
+					}]
+				}, {
+					value: '120000',
+					text: '天津',
+					children: [{
+						value: "120101",
+						text: "天津"
+					}]
+				},{
+					value: '130000',
+					text: '河北',
+					children: [{
+						value: "130101",
+						text: "石家庄"
+					}, {
+						value: "130102",
+						text: "唐山"
+					}, {
+						value: "130104",
+						text: "秦皇岛"
+					}
+					]
+				}
+				])
+				
+				picker.show(function(selectItems) {
+					$("#showCityPicker").val(selectItems[0].text+" "+selectItems[1].text);
+				})
+			
+			});
+			
+			
+			$("#showHouseTypePicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'商品房有按揭'},
+								{value:'01',text:'商品房无按揭'},
+								{value:'02',text:'已购公房'},
+								{value:'03',text:'租用/月租房'},
+								{value:'04',text:'单位集体宿舍'},
+								{value:'05',text:'亲属/父母家'},
+								{value:'06',text:'单位分配'},
+								{value:'07',text:'其他'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showHouseTypePicker").val(selectItems[0].text);
+				});
+			
+			});
+			
+			$("#showAddressLeve1Picker").bind("click", function(){
+				var picker = new mui.PopPicker({
+					layer: 3
+				});
+				picker.setData([{
+					value: '120000',
+					text: '天津',
+					children: [{
+						value: "120001",
+						text: "天津",
+						children: [{
+							value: "120101",
+							text: "和平区"
+						},{
+							value: "120103",
+							text: "南开区"
+						}]
+					}]
+				}
+				])
+				
+				picker.show(function(selectItems) {
+					$("#showAddressLeve1Picker").val(selectItems[0].text+" "+selectItems[1].text+" "+selectItems[2].text);
+				})
+			
+			});
+			
+			$("#showWorkAddressLeve1Picker").bind("click", function(){
+				var picker = new mui.PopPicker({
+					layer: 3
+				});
+				picker.setData([{
+					value: '120000',
+					text: '天津',
+					children: [{
+						value: "120001",
+						text: "天津",
+						children: [{
+							value: "120101",
+							text: "和平区"
+						},{
+							value: "120103",
+							text: "南开区"
+						}]
+					}]
+				}
+				])
+				
+				picker.show(function(selectItems) {
+					$("#showWorkAddressLeve1Picker").val(selectItems[0].text+" "+selectItems[1].text+" "+selectItems[2].text);
+				})
+			
+			});
+			
+			$("#showPostAddressPicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'住宅地址'},
+								{value:'01',text:'单位地址'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showPostAddressPicker").val(selectItems[0].text);
+				});
+			
+			});
+			
+			$("#showRelationshipPicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'父母'},
+								{value:'01',text:'配偶'},
+								{value:'02',text:'子女'},
+								{value:'03',text:'其他'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showRelationshipPicker").val(selectItems[0].text);
+				});
+			
+			});
+			
+			$("#showFriedshipPicker").bind("click", function(){
+				var picker = new mui.PopPicker(); 
+				picker.setData([{value:'00',text:'父母'},
+								{value:'01',text:'配偶'},
+								{value:'02',text:'子女'},
+								{value:'03',text:'兄弟/姐妹'},
+								{value:'04',text:'其他'}]); 
+				
+				picker.show(function(selectItems) {
+					$("#showFriedshipPicker").val(selectItems[0].text);
+				});
+			});
+			
+		});
+  </script>
+</html>
