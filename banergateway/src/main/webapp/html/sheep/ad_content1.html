@@ -36,21 +36,30 @@
     $(document).ready(function(){
       $('.con-bg').width($(window).width());
       $('.con-bg').height($('.con-bg').width());
+
       //3秒后显示红包
       setTimeout(function(){
         $('#red').addClass('red-receive');
         $('.red-receive').animate({bottom:'5%'}, 500);
-      },1000)
+      },3000);
+
+      //5秒后移除红包抖动效果
+      setTimeout(function(){
+        $('#red').removeClass('shake-constant');
+      },5000);
+
       //跳到红包页面
       $("#red").bind("click", function(){
           mui.openWindow({
               url: 'red/red.html', 
           });
       });
+
       //返回按钮
       $("#back_a").bind("click", function(){
           history.go(-1);
       });
+      
     });
   </script>
 </html>
