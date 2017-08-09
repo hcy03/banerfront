@@ -8,10 +8,9 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <script type="text/javascript" src="../../js/base.js"></script>
     <title>广告主内容1，能领取红包</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/shake.css" rel="stylesheet" media="all" />
+    <link href="../../css/time_css.css" rel="stylesheet" media="all" />
   </head>
   <body class="bg-fff">
     <header class="mui-bar mui-bar-nav">
@@ -29,28 +28,52 @@
         <p>无抵押贷款无抵押贷款...</p>
         <p>无抵押贷款无抵...</p>
       </div>
-      <div id="red" class="shake shake-chunk shake-constant"></div>          
+      <div id="red" class="red-receive"></div>
+      <!-- 倒计时 -->
+      <div class="game_time">
+        <div class="hold">
+          <div class="pie pie1"></div>
+        </div>
+        <div class="hold">
+          <div class="pie pie2"></div>
+        </div>
+        <div class="bg"> </div>       
+        <div class="time"></div>       
+      </div>
+      <!-- 倒计时结束 -->  
     </div>
   </body>
+  <script type="text/javascript" src="../../js/base.js"></script>
+  <script type="text/javascript" src="../../js/jquery.js"></script>
+  <script type="text/javascript" src="../../js/time_js.js"></script>
   <script type="text/javascript" >  
-    $(document).ready(function(){
+    $(document).ready(function(){    
       $('.con-bg').width($(window).width());
       $('.con-bg').height($('.con-bg').width());
+
       //3秒后显示红包
       setTimeout(function(){
-        $('#red').addClass('red-receive');
-        $('.red-receive').animate({bottom:'5%'}, 500);
-      },1000)
+        $('.red-receive').animate({top:'88%'}, 2000);
+      },3000);
+
+      /*3秒后隐藏倒计时*/
+      countDown();
+      setTimeout(function(){
+         $('.game_time').hide();
+      },3000);
+
       //跳到红包页面
       $("#red").bind("click", function(){
           mui.openWindow({
               url: 'red/red.html', 
           });
       });
+
       //返回按钮
       $("#back_a").bind("click", function(){
           history.go(-1);
       });
+
     });
   </script>
 </html>
