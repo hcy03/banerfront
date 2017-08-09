@@ -8,9 +8,9 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <script type="text/javascript" src="../../js/base.js"></script>
     <title>广告主内容2，不能领取红包</title>
     <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/time_css.css" rel="stylesheet" media="all" />
   </head>
   <body class="bg-fff">
     <header class="mui-bar mui-bar-nav">
@@ -28,25 +28,53 @@
         <p>无抵押贷款无抵押贷款...</p>
         <p>无抵押贷款无抵...</p>
       </div>
-      <div id="red" class="shake shake-vertical"></div>
-    </div>    
+      <div id="red" class="red-receive"></div>
+      <!-- 倒计时 -->
+      <div class="game_time">
+        <div class="hold">
+          <div class="pie pie1"></div>
+        </div>
+        <div class="hold">
+          <div class="pie pie2"></div>
+        </div>
+        <div class="bg"> </div>       
+        <div class="time"></div>       
+      </div>
+      <!-- 倒计时结束 -->  
+    </div>
   </body>
+  <script type="text/javascript" src="../../js/base.js"></script>
+  <script type="text/javascript" src="../../js/jquery.js"></script>
+  <script type="text/javascript" src="../../js/time_js.js"></script>
   <script type="text/javascript" >  
     $(document).ready(function(){
       $('.con-bg').width($(window).width());
       $('.con-bg').height($('.con-bg').width());
+
       //3秒后显示红包
       setTimeout(function(){
-        $('#red').addClass('red-receive');
-        $('.red-receive').animate({bottom:'5%'}, 500);
-      },3000)
+        $('.red-receive').animate({top:'88%'}, 2000);
+      },3000);
+
+      /*3秒后隐藏倒计时*/
+      countDown();
+      setTimeout(function(){
+         $('.game_time').hide();
+      },3000);
+    
       //点击红包显示弹窗提示
-      $("#red").bind("click", function(){
-        $('body').append('<div class="toast-container mui-active" id="mask"><div class="mui-toast-message">不要太贪心哦，亲</div></div>');
-        setTimeout(function(){
-          $('#mask').remove();
-        },3000)
+      var isFlag = true; //点击按钮开关
+      $("#red").on("click", function(){
+        if(isFlag){
+          isFlag = false;
+          $('body').append('<div class="toast-container mui-active" id="mask"><div class="mui-toast-message">显示提示显示提示</div></div>');
+          setTimeout(function(){
+            $('#mask').remove();
+            isFlag = true;
+          },3000)
+        }
       });
+
       //返回按钮
       $("#back_a").bind("click", function(){
           history.go(-1);
